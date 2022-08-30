@@ -2,7 +2,7 @@ import React from 'react'
 import {supabase} from '../../utils/supabaseClient'
 import {useEffect} from 'react'
 
-function articlePage({data}) {
+function ArticlePage({data}) {
   const contentData = data[0]
   
     async function incrementViews(){
@@ -73,4 +73,4 @@ export async function getServerSideProps(context) {
   }
 }
 
-export default articlePage
+export default ArticlePage
