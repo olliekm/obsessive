@@ -1,9 +1,7 @@
 import React, {useEffect} from 'react'
-import {useRouter} from 'next/router'
 import {supabase} from '../../utils/supabaseClient'
 
 function articlePage({data}) {
-  const router = useRouter()
   const contentData = data[0]
   useEffect( () => {
       incrementViews()
