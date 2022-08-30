@@ -4,18 +4,18 @@ import {useEffect} from 'react'
 
 function articlePage({data}) {
   const contentData = data[0]
+  
+    async function incrementViews(){
+      const { data, error } = await supabase
+      .from('Articles')
+      .update({ views: contentData.views + 1 })
+      .match({id: contentId})
+    }
   useEffect( () => {
       incrementViews()
   }, [])
   const views = contentData.views
   const contentId = contentData.id
-
-  async function incrementViews(){
-    const { data, error } = await supabase
-    .from('Articles')
-    .update({ views: contentData.views + 1 })
-    .match({id: contentId})
-  }
   
   return (
     <div className='min-h-screen flex flex-col items-center'>
