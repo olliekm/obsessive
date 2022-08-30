@@ -40,7 +40,7 @@ function CategorieLayout({children, title, data, catFor}) {
             <div className="w-full h-auto pt-5 space-y-4">
                 {   
                     contentData?.map((item, i) => (
-                        <ArticleItem id={item.id} title={item.title} desc={item.description} img={item.img} views={item.views}/>
+                        <ArticleItem key={i} id={item.id} title={item.title} desc={item.description} img={item.img} views={item.views}/>
                     ))
                 }
                 {
