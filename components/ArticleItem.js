@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 
-function ArticleItem({title, img, desc, views, id}) {
+function ArticleItem({title, img, desc, views, id, key}) {
   return (
-    <Link href={`/article/${id}`}>
+    <Link href={`/article/${id}`} key={key}>
         <div className="h-64 overflow-hidden relative bg-center bg-cover contrast-[1.15]" style={{backgroundImage: `url("${img}")`}}>
             <div className="w-full h-full bg-black/50 text-white p-10">
                 <h1 className='font-serif text-3xl'>{title}</h1>

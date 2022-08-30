@@ -1,5 +1,6 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import {supabase} from '../../utils/supabaseClient'
+import {useEffect} from 'react'
 
 function articlePage({data}) {
   const contentData = data[0]
